@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students' Time</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" id="pomodoro-nav">Pomodoro</a>
+        <a href="#" id="clock-nav">Clock</a>
+        <a href="#" id="settings">Settings</a>
+        <a href="#" id="about">About</a>
+    </div>
+
+    <!-- Pomodoro Page -->
+    <div id="pomodoro-page" class="page active">
+        <h1>Pomodoro Timer</h1>
+        <div class="container">
+            <div class="timer">
+                <div class="pomo-display">
+                    <span id="minutes">25</span>:<span id="seconds">00</span>
+                </div>
+                <div class="time-controls">
+                    <button id="start">Start</button>
+                    <button id="pause">Pause</button>
+                    <button id="reset">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="task-box">
+            <h2>To-Do List</h2>
+            <div class="tasks">
+                <!-- Tasks will be dynamically inserted here -->
+            </div>
+            <div class="task-input">
+                <input type="text" id="task-input" placeholder="Add a new task...">
+                <button id="add-task">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Clock Page -->
+    <div id="clock-page" class="page">
+            <h1>Clock</h1>
+            <div class="container">
+            <div class="clock">
+                <span id="current-time"></span>
+            </div>
+        </div>
+        <div class="task-box">
+            <h2>To-Do List</h2>
+            <div class="tasks">
+                <!-- Tasks will be dynamically inserted here -->
+            </div>
+            <div class="task-input">
+                <input type="text" id="task-input" placeholder="Add a new task...">
+                <button id="add-task">Add</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Settings Page -->
+    <div id="settings-panel" class="page">
+        <h2>Settings</h2>
+        <label for="pomodoro-time">Pomodoro Time (minutes):</label>
+        <input type="number" id="custom-time" placeholder="Enter time in minutes" min="1">
+        <button id="set-custom-time">Set Time</button>
+
+        <br><br>
+        <label for="background-image">Custom Background Image URL:</label>
+        <input type="text" id="background-image" placeholder="Enter image URL">
+        <br>
+        <label for="preset-images">Or Select a Preset Background:</label>
+        <select id="preset-images">
+            <option value="">None</option>
+            <option value="https://cdn.pixabay.com/photo/2020/01/13/21/31/illustration-4763593_1280.jpg">Green Meadows</option>
+            <option value="https://static.vecteezy.com/system/resources/previews/000/274/527/non_2x/night-view-ocean-vector-background-illustration.jpg">Nightly Ocean</option>
+            <option value="https://upload-os-bbs.hoyolab.com/upload/2023/10/09/249619589/13d4969828ff54fde0c8e2634af8b5bb_769731514447414653.jpg">Windy Path</option>
+            <option value="https://w0.peakpx.com/wallpaper/308/644/HD-wallpaper-video-game-genshin-impact-inazuma-genshin-impact.jpg">Inazuma Mountains</option>
+        </select>
+
+        <label for="background-color">Default Background Color:</label>
+        <input type="color" id="background-color" value="#f4f4f9">
+
+        <button id="apply-background">Apply</button>
+    </div>
+
+    <!-- About Page -->
+    <div id="about-panel" class="page">
+        <h2>About</h2>
+        <p>The Pomodoro Timer helps you manage your time effectively using the Pomodoro technique with additional helpful tools. With the clock to aid in study or work, keeping track of your life becomes a breeze. <br>Such timers are usually boring, so custom backgrounds are added visually spice it up!</p>
+    </div>
+
+    <script src="index.js" defer></script>
+</body>
+</html>
+
+
+
